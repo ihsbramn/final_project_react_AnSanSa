@@ -6,6 +6,7 @@ import SearchResult from "./SearchResult";
 import LeftPanel from "./LeftPanel";
 import Posts from "./Posts";
 import { Route, Routes } from "react-router-dom";
+import License from "./License";
 
 export default function App() {
   const apiUrl = process.env.REACT_APP_API_URL;
@@ -29,6 +30,7 @@ export default function App() {
             />
             <Route path="/search/result" element={<SearchResult />} />
           </Routes>
+          <License/>
         </>
       }
     />
