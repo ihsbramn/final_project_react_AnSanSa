@@ -1,8 +1,24 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import {
+  EmailShareButton,
+  FacebookShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+  WhatsappShareButton,
+} from "react-share";
+
+import {
+  EmailIcon,
+  FacebookIcon,
+  TelegramIcon,
+  TwitterIcon,
+  WhatsappIcon,
+} from "react-share";
 
 export default function Posts(props) {
+  let url = window.location.href;
   const [posts, setPosts] = useState([]);
   const { postId } = useParams();
   const { name } = useParams();
@@ -42,6 +58,29 @@ export default function Posts(props) {
           </ul>
           <h4>Author</h4>
           <p>{post.author}</p>
+
+          <p>Share This Article</p>
+
+          <EmailShareButton url={url}>
+            <EmailIcon size={36}/>
+          </EmailShareButton>
+
+          <FacebookShareButton url={url}>
+            <FacebookIcon size={36} />
+          </FacebookShareButton>
+          
+          <TwitterShareButton url={url}>
+            <TwitterIcon size={36}/>
+          </TwitterShareButton>
+
+          <WhatsappShareButton url={url}>
+            <WhatsappIcon size={36}/>
+          </WhatsappShareButton>
+
+          <TelegramShareButton url={url}>
+            <TelegramIcon size={36}/>
+          </TelegramShareButton>
+
         </section>
       ))}
       <p>

@@ -3157,7 +3157,8 @@ button,
   background-color: transparent;
   border-radius: 0.375em;
   border: 0;
-  box-shadow: inset 0 0 0 2px #f56a6a;
+  /* box-shadow: inset 0 0 0 2px #f56a6a; */
+  margin: 2px;
   color: #f56a6a !important;
   cursor: pointer;
   display: inline-block;
